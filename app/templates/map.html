@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<title>Карта</title>
+    <h1>Карта пробок в Липецкой области(Липецке)</h1>
+    <p>Два клика ЛКМ - приблизить карту. Два клика ПКМ - отдалить карту.</p>
+    <div id="YMapsID" style="width:max;height:500px"></div>
+<script type="text/javascript" src=
+            "/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=LzLehpTjHcGyWKkq1_El-ZHhUtnOOnr2YVnspCgODanrZEzqtWoV7B9R6rHo8LrcvM9-coLXJIuoZH_YZRmQhNIgWgahxFETs9wWftGo7vppeVghrPcbz_lPPPq9GwHe" charset="UTF-8"></script>
+    <script src="https://api-maps.yandex.ru/1.1/index.xml?modules=traffic" type="text/javascript"></script>
+    <script type="text/javascript">
+        YMaps.jQuery(function () {
+            var map = new YMaps.Map(YMaps.jQuery("#YMapsID")[0]),
+                traffic = new YMaps.Traffic.Control();
+            map.setCenter(new YMaps.GeoPoint(39.57, 52.60), 12);
+            map.addControl(traffic);
+            traffic.show();
+        })
+    </script>
+{% endblock %}

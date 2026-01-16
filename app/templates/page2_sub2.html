@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f9f9f9;
+        color: #333;
+        line-height: 1.6;
+        padding: 20px;
+    }
+
+    h2 {
+        color: #2c3e50;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    p {
+        margin-bottom: 15px;
+        transition: transform 0.3s ease;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: #ffffff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    p:hover {
+        transform: scale(1.02);
+    }
+
+    .important {
+        font-weight: bold;
+        color: #28a745; /* Зеленый цвет */
+    }
+</style>
+
+<h2>Информация о Ельце</h2>
+
+<p>
+    Свою историю <span class="important">Елец</span> ведёт с <span class="important">1146 года</span>. Именно тогда он был впервые упомянут в <span class="important">Никоновской летописи</span>.
+</p>
+
+<p>
+    Елец — второй по численности город Липецкой области и старейший в российском <span class="important">Черноземье</span>. Он расположен в <span class="important">80 километрах</span> западнее областного центра на реке <span class="important">Быстрая Сосна</span>.
+</p>
+
+<p>
+    Главная площадь города называется <span class="important">Красная</span>. В середине <span class="important">XIX века</span>, когда в Ельце строили <span class="important">Вознесенский собор</span>, открылись массовые захоронения горожан, погибших в <span class="important">1395 году</span> во время битвы с войском <span class="important">Тамерлана</span>. Отсюда и название «Красная», что значит «кровавая».
+</p>
+
+<p>
+    В <span class="important">XVIII веке</span> Елец превратился в богатый купеческий город. Основой его экономики стала <span class="important">торговля хлебом</span>. Именно здесь в <span class="important">1888 году</span> был построен первый в России <span class="important">элеватор</span>.
+</p>
+
+<p>
+    Основа экономики современного города — <span class="important">горная отрасль</span>, а именно добыча известняка на четырех окрестных карьерах.
+</p>
+
+<p>
+    Елец славится своими уникальными <span class="important">кружевами</span>. Зародившись в <span class="important">XVIII веке</span> как подражание кружевоплетению Западной Европы, промысел со временем обрёл собственный стиль.
+</p>
+
+{% endblock %}

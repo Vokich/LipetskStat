@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f9f9f9;
+        color: #333;
+        line-height: 1.6;
+        padding: 20px;
+    }
+
+    h2 {
+        color: #2c3e50;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    p {
+        margin-bottom: 15px;
+        transition: transform 0.3s ease;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: #ffffff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    p:hover {
+        transform: scale(1.02);
+    }
+
+    .important {
+        font-weight: bold;
+        color: #28a745;
+    }
+</style>
+
+<h2>Факты о регионе</h2>
+
+<p>
+    1) <span class="important">Липецкая область</span> лидирует в производстве <span class="important">молока</span> в стране.
+</p>
+
+<p>
+    2) Регион занимает первое место в стране по выпуску <span class="important">бытовых холодильников</span> и <span class="important">морозильников</span>.<br>
+    Более <span class="important">40%</span> всех холодильников выпускается здесь.
+</p>
+
+<p>
+    3) Это один из немногих регионов РФ, который не получает <span class="important">дотации</span> из федерального центра.
+</p>
+
+<p>
+    4) Столица области — город <span class="important">Липецк</span> считается первым русским курортом.<br>
+    Он был обустроен здесь ещё во времена <span class="important">Александра I</span>.
+</p>
+
+<p>
+    5) Область была образована в <span class="important">1954 году</span> из смежных регионов <span class="important">Рязанской</span>,
+    <span class="important">Воронежской</span>, <span class="important">Курской</span> и <span class="important">Орловской</span> областей.
+</p>
+
+{% endblock %}

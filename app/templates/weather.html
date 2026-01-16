@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<title>Погода</title>
+<h1>Погода в Липецкой области</h1>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Получить погоду</button>
+    </form>
+
+    {% if weather_data %}
+        <div class="weather-info">
+            <h2>Погода на сегодня:</h2>
+            <p><strong>Температура:</strong> {{ weather_data.main.temp|floatformat:0 }} °C</p>
+            <p><strong>Описание:</strong> {{ weather_data.weather.0.description }}</p>
+            <p><strong>Влажность:</strong> {{ weather_data.main.humidity|floatformat:0 }}%</p>
+        </div>
+    {% endif %}
+
+    {% if forecast_data %}
+        <div class="forecast-info">
+            <h2>Прогноз на завтра:</h2>
+            <p><strong>Температура:</strong> {{ forecast_data.list.1.main.temp|floatformat:0 }} °C</p>
+            <p><strong>Описание:</strong> {{ forecast_data.list.1.weather.0.description }}</p>
+            <p><strong>Влажность:</strong> {{ humidity_tomorrow }}%</p>
+        </div>
+    {% endif %}
+{% endblock %}

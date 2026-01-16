@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f9f9f9;
+        color: #333;
+        line-height: 1.6;
+        padding: 20px;
+    }
+
+    h2 {
+        color: #2c3e50;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    p {
+        margin-bottom: 15px;
+        transition: transform 0.3s ease;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: #ffffff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    p:hover {
+        transform: scale(1.02);
+    }
+
+    .important {
+        font-weight: bold;
+        color: #28a745; /* Зеленый цвет */
+    }
+</style>
+
+<h2>Информация о Липецке</h2>
+
+<p>
+    <span class="important">Липецк</span> — первый русский курорт. Знаменитые <span class="important">Липецкие минеральные источники</span> с хлористо-сульфатной водой были открыты в <span class="important">1805 году</span>, и город приобрёл статус курортного центра.
+</p>
+
+<p>
+    Символ города — <span class="important">липа</span>. Этих деревьев тут действительно много, и благодаря им Липецк и получил своё название.
+</p>
+
+<p>
+    В начале <span class="important">XIX века</span> пожар уничтожил почти весь город. После этого горожане стали строить в основном <span class="important">каменные дома</span>, а не деревянные.
+</p>
+
+<p>
+    В Липецке семь «космических» улиц: <span class="important">Гагарина</span>, <span class="important">Звёздная</span>, <span class="important">Космонавтов</span>, <span class="important">Циолковского</span>, <span class="important">Филипченко</span>, <span class="important">Валентины Терешковой</span>, <span class="important">Германа Титова</span>. Все они расположены в одном городском округе.
+</p>
+
+<p>
+    Площадь Липецка с пригородами в три раза меньше площади <span class="important">Москвы</span> в пределах МКАД.
+</p>
+
+<p>
+    В Липецке <span class="important">5 собственных вузов</span> и <span class="important">13 филиалов</span> иногородних университетов и институтов.
+</p>
+
+<p>
+    Самый крупный водоём Липецка создан человеком — это <span class="important">Матырское водохранилище</span>.
+</p>
+
+{% endblock %}

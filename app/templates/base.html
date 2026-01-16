@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ЛипецкСтат</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        h1{
+          text-align: center;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .site-title {
+            font-size: 2.5em;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        /* Исправленные стили для вкладок с grid */
+        .tabs {
+            margin-bottom: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+
+        .tab-container {
+            position: relative;
+            width: 100%;
+        }
+
+        .tab-button {
+            display: block;
+            width: 100%;
+            padding: 12px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        .tab-button:hover {
+            background-color: #45a049;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #f9f9f9;
+            min-width: 100%;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 100;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .tab-container:hover .dropdown {
+            display: block;
+        }
+
+        .dropdown a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            border-bottom: 1px solid #eee;
+            transition: background-color 0.2s;
+            font-size: 14px;
+        }
+
+        .dropdown a:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .content {
+            border: 1px solid #ccc;
+            padding: 20px;
+            background-color: #f9f9f9;
+            max-width: 800px;
+            margin: 0 auto;
+            border-radius: 8px;
+        }
+
+        /* Стили для форм */
+        .form-section {
+            margin-bottom: 40px;
+        }
+
+        .form-field {
+            margin-bottom: 15px;
+        }
+
+        /* Стили для кнопки */
+        .submit-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            width: auto;
+            min-width: 150px;
+        }
+
+        .submit-button:hover {
+            background-color: #45a049;
+        }
+
+        /* Стили для списка */
+        .attraction-list,
+        .news-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .attraction-item,
+        .news-item {
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .attraction-title,
+        .news-title {
+            font-size: 1.5em;
+            margin-top: 0;
+            color: #333;
+        }
+
+        .attraction-image,
+        .news-image {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+
+        .attraction-description,
+        .news-content {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Стили для футера */
+        .footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #f1f1f1;
+            margin-top: 40px;
+            border-radius: 5px;
+            max-width: 800px;
+            margin: 40px auto 0;
+        }
+    </style>
+</head>
+<body>
+<h1>ЛипецкСтат</h1>
+<div class="tabs">
+    <div class="tab-container">
+        <a class="tab-button">Достопримечательности</a>
+        <div class="dropdown">
+            <a href="{% url 'attractions1' %}">Липецк</a>
+            <a href="{% url 'attractions2' %}">Елец</a>
+        </div>
+    </div>
+    <div class="tab-container">
+        <a class="tab-button">Города</a>
+        <div class="dropdown">
+            <a href="{% url 'page2_1' %}">Липецк</a>
+            <a href="{% url 'page2_2' %}">Елец</a>
+        </div>
+    </div>
+    <div class="tab-container">
+        <a class="tab-button" href="{% url 'news' %}">Новости региона</a>
+    </div>
+    <div class="tab-container">
+        <a class="tab-button">Туризм</a>
+        <div class="dropdown">
+            <a href="{% url 'page3_1' %}">Факты о регионе</a>
+            <a href="{% url 'page3_2' %}">Это надо знать!</a>
+        </div>
+    </div>
+    <div class="tab-container">
+        <a class="tab-button">Прочее</a>
+        <div class="dropdown">
+            <a href="{% url 'map' %}">Карта</a>
+            <a href="{% url 'weather' %}">Погода</a>
+        </div>
+    </div>
+</div>
+<div id="content" class="content">
+    {% block content %}{% endblock %}
+</div>
+</body>
+</html>

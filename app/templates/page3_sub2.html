@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f9f9f9;
+        color: #333;
+        line-height: 1.6;
+        padding: 20px;
+    }
+
+    h2 {
+        color: #2c3e50;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    p {
+        margin-bottom: 15px;
+        transition: transform 0.3s ease;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: #ffffff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    p:hover {
+        transform: scale(1.02);
+    }
+
+    .important {
+        font-weight: bold;
+        color: #28a745; /* Зеленый цвет */
+    }
+</style>
+
+<h2>Что нужно знать о регионе?</h2>
+
+<p>
+    Административный центр — город <span class="important">Липецк</span>.
+</p>
+
+<p>
+    Площадь — <span class="important">24 047 км²</span>.
+</p>
+
+<p>
+    Население (по данным на <span class="important">2024 год</span>) — <span class="important">1 116 265</span> человек.
+</p>
+
+<p>
+    Граничит с <span class="important">Курской</span>, <span class="important">Орловской</span>, <span class="important">Тульской</span>, <span class="important">Рязанской</span>, <span class="important">Тамбовской</span> и <span class="important">Воронежской</span> областями.
+</p>
+
+<p>
+    Главная река — <span class="important">Дон</span>.
+</p>
+
+<p>
+    Климат — <span class="important">умеренно континентальный</span>, с холодной зимой и тёплым летом.
+</p>
+
+<p>
+    В составе области <span class="important">13 районов</span>, <span class="important">5 округов</span> и два города областного подчинения: <span class="important">Липецк</span> и <span class="important">Елец</span>.
+</p>
+
+<p>
+    Известны <span class="important">Липецкие минеральные источники</span> и <span class="important">лечебные грязи</span>. На базе них функционирует курорт <span class="important">«Липецк»</span>.
+</p>
+
+{% endblock %}

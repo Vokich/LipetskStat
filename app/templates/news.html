@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Новости региона</h2>
+
+<div class="form-section">
+    <h3>Добавить новость</h3>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-field">
+            {{ form.as_p }}
+        </div>
+        <button type="submit" class="submit-button">Опубликовать новость</button>
+    </form>
+</div>
+
+<div class="news-list">
+    <h3>Последние новости</h3>
+
+    {% if news %}
+    <ul>
+        {% for news_item in news %}
+        <li class="news-item">
+            <h3 class="news-title">{{ news_item.title }}</h3>
+            {% if news_item.image %}
+                <img src="{{ news_item.image.url }}" alt="{{ news_item.title }}" class="news-image">
+            {% endif %}
+            <p class="news-content">{{ news_item.content }}</p>
+            <p class="news-date"><small>Опубликовано: {{ news_item.created_at|date:"d.m.Y H:i" }}</small></p>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p class="news-item">Нет новостей для отображения. Добавьте первую новость через форму выше.</p>
+    {% endif %}
+</div>
+{% endblock %}
