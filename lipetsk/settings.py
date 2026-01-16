@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-567k4-487re%y%8dl@x9k3b)a(9$+(o_kq)k9o^f90er$s-(%$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["lipetsk.onrender.com"]
 
 
 # Application definition
@@ -127,3 +127,7 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
